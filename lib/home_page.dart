@@ -1,14 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui/pages/fitness.dart';
 import 'package:flutter_ui/pages/prompt_today.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  Map<String, Widget> pages = {
+    'prompt_today': const PromptTodayPage(),
+    'fitness': const FitnessPage(),
+  };
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: PromptTodayPage(),
+      theme: ThemeData(fontFamily: 'Poppins'),
+      home: pages['fitness'],
     );
   }
 }
