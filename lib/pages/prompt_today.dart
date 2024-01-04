@@ -24,8 +24,9 @@ class _PromptPageState extends State<PromptTodayPage> {
         ),
       ),
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
+          // crossAxisAlignment: CrossAxisAlignment.start,
+          scrollDirection: Axis.vertical,
           children: <Widget>[
             Container(
               width: double.infinity,
@@ -153,7 +154,8 @@ class _PromptPageState extends State<PromptTodayPage> {
                   ),
                 ],
               ),
-            )
+            ),
+            const SizedBox(height: 30),
           ],
         ),
       ),
